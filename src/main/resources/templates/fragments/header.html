@@ -1,0 +1,10 @@
+<div th:fragment="header(title)">
+    <nav class="navbar navbar-dark bg-primary fixed-top px-4">
+        <span class="navbar-text text-white fw-bold" th:if="${client != null}">
+            👤 <span th:text="${client.username}">Username</span> |
+            <a class="link-info" th:href="@{/logout}">Logout</a>
+        </span>
+        <span class="navbar-brand mx-auto text-white" th:text="${title}">Page Title</span>
+        <a class="btn btn-outline-light" th:href="@{/home}">← Go Back</a>
+    </nav>
+</div>
